@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
 
 
-add_library( ntl SHARED IMPORTED )
+add_library( ntl SHARED IMPORTED GLOBAL )
 set_property( TARGET ntl PROPERTY IMPORTED_LOCATION /home/peta/ntl/lib/libntl.so ) 
 target_include_directories( ntl INTERFACE /home/peta/ntl/include )
 
