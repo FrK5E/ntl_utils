@@ -37,3 +37,17 @@ BOOST_AUTO_TEST_CASE( test3) {
 
 
 }
+
+BOOST_AUTO_TEST_CASE( test4) {
+    NTL::ZZ a{47};
+    BOOST_CHECK_EQUAL(Utils::get_sum_of_digits(a), 4+7 );
+
+    a = 349;
+    BOOST_CHECK_EQUAL(Utils::get_sum_of_digits(a), 3+4+9 );
+    BOOST_CHECK_EQUAL(Utils::is_lichrel(a, 3), false );
+
+    a = 10677;
+    BOOST_CHECK_EQUAL( Utils::get_sum_of_digits(a), 1+6+7+7);
+
+}
+

@@ -12,4 +12,6 @@ namespace Utils {
     ZZ get_reverse( const ZZ & number );
 
     bool is_lichrel( const ZZ & number, const ushort limit=50 ); 
+
+    size_t get_sum_of_digits( const ZZ & number );
 }

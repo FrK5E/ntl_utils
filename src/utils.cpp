@@ -51,5 +51,14 @@ bool is_lichrel( const ZZ & number, const ushort limit ) {
     }
     return true;
 } 
+size_t get_sum_of_digits( const ZZ & number ) { 
+    size_t result{0};
+    auto s = UtilsImpl::conver_to_string( number ); 
+    size_t len = s.length();
+    for ( size_t i=0; i<len; i++ ){
+        result += s[i] - '0'; 
+    }
+    return result;
+}
 
 }
